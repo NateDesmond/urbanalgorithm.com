@@ -55,8 +55,14 @@
   .soon { border:2px dashed var(--line); border-radius:12px; padding:18px; color:var(--muted); }
   .brief-bar { display:flex; gap:10px; align-items:center; margin:8px 0 10px; flex-wrap:wrap; }
   .brief-bar button { font:600 14px inherit; background:var(--accent); color:#fff; border:0; border-radius:8px; padding:8px 14px; cursor:pointer; }
+  .brief-bar .dl { font:600 14px inherit; color:var(--accent); }
   .brief-bar span { font-size:13px; color:var(--muted); }
   pre { background:var(--navy); color:#e8e1d4; border-radius:10px; padding:16px; overflow:auto; max-height:460px; font:13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; white-space:pre-wrap; }
+  .intros { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:22px; margin:8px 0 6px; }
+  .intros video { width:100%; aspect-ratio:16/9; background:#000; border-radius:10px; display:block; }
+  .ih { font:700 26px "DIN Condensed", Impact, sans-serif; text-transform:none; letter-spacing:0; color:var(--ink); margin:12px 0 4px; }
+  .why { font-size:14px; color:var(--muted); }
+  blockquote { margin:10px 0 0; padding:10px 14px; border-left:4px solid var(--gold); background:color-mix(in srgb, var(--gold) 8%, transparent); border-radius:0 8px 8px 0; font-size:14px; }
   footer { color:var(--muted); font-size:13px; text-align:center; margin-top:40px; }
   @media (max-width:760px) { .two { grid-template-columns:1fr; } .hero-in { flex-direction:column; align-items:flex-start; } .hero h1 { font-size:32px; } }
 </style>
@@ -66,7 +72,7 @@
   <img src="img/logo.png" alt="Sidequest Builds logo">
   <div>
     <h1>The $600 golf cart: thumbnail + retention playbook</h1>
-    <p>A working plan for "I Turned a $600 Golf Cart Into THIS": thumbnail ideas built from your own footage, a feed test so you can see what you'd click, and a plan for the rest of the video. New intro cuts are coming in the next update.</p>
+    <p>A working plan for "I Turned a $600 Golf Cart Into THIS": three new intros, thumbnail ideas built from your own footage, a feed test so you can see what you'd click, a full talk track for the rest of the video, and a kit to finish it with Claude Code.</p>
   </div>
 </div></header>
 <main>
@@ -177,10 +183,35 @@
 </section>
 
 <section class="card" id="intros">
-  <h2>New intros</h2>
-  <div class="soon">
-    <p><b>Coming in the next update.</b> We're rebuilding the opening talk track from research into the biggest build and restoration channels: how their breakout videos open, line by line. Three different hooks will be cut from your footage: a challenge, a stakes bet, and a satisfying-first opener. Each will be about 15 to 30 seconds and lead into the plan below.</p>
+  <h2>Three new intros</h2>
+  <p class="lede">Built from research into how 44 breakout videos from the biggest build and restoration channels open. Thirty openings were drafted and scored blind by three judges, and these are the winners for three different hooks. Each runs about 25 seconds and leads into Step 1. The voice is AI (Google "Puck") for now; re-record it in your own voice with the same lines.</p>
+  <div class="intros">
+    <article>
+      <video controls preload="metadata" playsinline src="video/1_the_bet.mp4"></video>
+      <h3 class="ih"><span class="pick">1</span>The Bet</h3>
+      <p class="why">Opens on an object with a question attached. The price anchor (about ten grand new) tells a viewer who doesn't know golf carts why $600 is wild, and both outcomes are on the table.</p>
+      <blockquote>This tail light is going to tell me if I wasted six hundred bucks, or got a ten thousand dollar golf cart for almost nothing. Because the day I got it, nothing on it lit up. 2012 Yamaha. Empty battery bay. No solenoid. Controller's not working. Sun-faded lights. A chalky body. Gray plastic trim. I'm buffing the body, not painting it. So here's the bet. If those tail lights glow and this thing drives, I win. If not, I just built a very clean six hundred dollar lawn ornament.</blockquote>
+    </article>
+    <article>
+      <video controls preload="metadata" playsinline src="video/2_the_list.mp4"></video>
+      <h3 class="ih"><span class="pick">2</span>The List</h3>
+      <p class="why">Price, model and dead state in the first two seconds, then "either I got a steal, or there's a reason it was six hundred". The checklist is the structure, and the last box is the one he's not sure about.</p>
+      <blockquote>Six hundred dollar golf cart. 2012 Yamaha. Won't turn on. New, these are about ten grand. So either I got a steal, or there's a reason it was six hundred. Here's the reason. Batteries. There aren't any. Solenoid. Also missing. Controller. Dead. Plus a couple of broken wires I'm not counting as a box. Body. Oxidized, chipped, sun-faded. I'm buffing it, not repainting it. Four boxes I can probably handle. It's the last one I'm not sure about. Will this thing ever move again?</blockquote>
+    </article>
+    <article>
+      <video controls preload="metadata" playsinline src="video/3_from_this.mp4"></video>
+      <h3 class="ih"><span class="pick">3</span>From This</h3>
+      <p class="why">Pays off the title in the first sentence on the best shot you have, then rewinds. The twist (no repaint) and "I'm not a body shop" carry the personality.</p>
+      <blockquote>I turned a six hundred dollar golf cart into this. New, one of these is about ten grand. Here's what six hundred bucks actually got me. A 2012 Yamaha that wouldn't even turn on. No batteries. No solenoid. And a dead controller. And the plastic looks like it's been in an oven. A body shop would paint it. I'm not a body shop. So the body just got a buffer. Even this gray trim came back black without paint. But none of that matters if it won't drive. Best case, it drives. Worst case, I spent six hundred bucks on a really shiny chair.</blockquote>
+    </article>
   </div>
+  <h3>Why these work</h3>
+  <ul>
+    <li><b>Talking from the first frame.</b> Breakout openings start speaking at about 0.25 seconds and say 75 to 110 words in the first 30 seconds. The old intro said its first real hook at 0:17.</li>
+    <li><b>Price plus a specific failure by 8 seconds</b>, with a reference price so $600 means something.</li>
+    <li><b>One yes/no question</b> the footage answers: will it drive? It does, at 8:37 in your original.</li>
+    <li><b>Assumptions in this mock-up:</b> the solenoid and controller were replaced and the total spend was about $1,000. Change the lines if not.</li>
+  </ul>
 </section>
 
 <section class="card" id="body">
@@ -208,8 +239,8 @@
 
 <section class="card" id="brief">
   <h2>Brief for Claude Code</h2>
-  <p class="lede">Copy this into Claude Code in the folder with your project files. It has the plan, the rules and the structure, so it can help you edit the rest of the video. It will be updated with the final intro scripts.</p>
-  <div class="brief-bar"><button id="copy">Copy brief</button><span id="copied"></span></div>
+  <p class="lede">Copy this into Claude Code in the folder with your project files. It has the plan, the rules, the three intro scripts and the full talk track for the rest of the video, with timecodes into your footage.</p>
+  <div class="brief-bar"><button id="copy">Copy brief</button><a class="dl" href="sidequest-edit-kit.zip" download>Download the edit kit (.zip)</a><span id="copied"></span></div>
 <pre id="brief-text"># Sidequest Builds: "$600 golf cart" re-edit brief
 
 ## Goal
@@ -260,8 +291,251 @@ Test three in YouTube Test &amp; Compare with a fixed title
 3. Hero shot of the finished cart with a $600 tag and a small "before" inset.
 Next shoot: a photo of him with the cart for a face/reaction thumbnail.
 
-## Intro scripts
-Coming in the next update of this page.</pre>
+## Price anchor
+A new Yamaha Drive2 is $9,952 MSRP (2026), so say "about ten grand new". Never state a resale value without a real local listing.
+
+## It drives
+The cart drives on camera at 8:37-8:54 (backs across the garage and pulls forward, brake lights glowing). That is the payoff. The checklist's last box is MAKE IT DRIVE.
+
+## Assumptions in the mock-up (confirm or change)
+Solenoid and controller replaced. Total spend about $1,000.
+
+## Intro scripts (three options; shot timecodes in seconds of the original video)
+
+## 1 · The Bet
+0.0  This tail light is going to tell me if I wasted six hundred bucks... | 127-133 old tail light, unlit | $600 tag
+3.2  or got a ten thousand dollar golf cart for almost nothing. | 560-562 finished cart, street | flash; NEW ≈ $10,000 tag
+6.4  Because the day I got it, nothing on it lit up. | 0.4-3 beat-up cart | DEAD stamp
+9.0  2012 Yamaha. Empty battery bay. No solenoid. Controller's not working. | 6-9 bay / 17-19 / 12-14 | checkboxes
+13.0 Sun-faded lights, a chalky body, gray trim. | 21-23 / 44-46 / 332-334 | BODY
+15.4 I'm buffing the body, not painting it. | 250-254 | NO REPAINT stamp
+17.4 So here's the bet. If those tail lights glow and this thing drives, I win. | 503-506 bay / 517-519 cart, lights off | MAKE IT DRIVE
+21.6 If not, I just built a very clean six hundred dollar lawn ornament. | 571.5-574 golden hour, front | STEP 1
+
+## 2 · The List
+0.0  Six hundred dollar golf cart. 2012 Yamaha. Won't turn on. | 0.4-3 beat-up | $600 tag + DEAD
+2.8  New, these are about ten grand. | 571.5-573 golden hour flash | NEW ≈ $10,000
+4.4  So either I got a steal, or there's a reason it was six hundred. | 48-51 walkaround |
+7.6  Here's the reason. Batteries. There aren't any. | 6-9 bay | ☐ BATTERIES
+9.8  Solenoid. Also missing. Controller. Dead. | 17-19 / 12-14 | ☐ SOLENOID ☐ CONTROLLER
+11.8 Plus a couple of broken wires I'm not counting as a box. | 138-141 wiring nest |
+14.6 Body. Oxidized, chipped, sun-faded. I'm buffing it, not repainting it. | 31-35 / 250-256 | ☐ BODY, NO REPAINT
+18.6 Four boxes I can probably handle. It's the last one I'm not sure about. | 142-146 / 503-506 | ☐ MAKE IT DRIVE (orange)
+22.6 Will this thing ever move again? | 560-562 finished, street | punch-in, then STEP 1
+
+## 3 · From This
+0.0  I turned a six hundred dollar golf cart into this. | 571.5-574 golden hour, front | $600 tag, flash
+2.4  New, one of these is about ten grand. | 574-575 | NEW ≈ $10,000
+4.2  Here's what six hundred bucks actually got me. A 2012 Yamaha that wouldn't even turn on. | 0.4-3 / 6-10 bay | split; DEAD
+8.6  No batteries. No solenoid. Dead controller. | 12-15 | ☐ ☐ ☐
+10.6 And the plastic looks like it's been in an oven. | 44-46 / 21-23 | ☐ BODY
+13.0 A body shop would paint it. I'm not a body shop. So the body just got a buffer. | 31-35 / 250-254 | NO REPAINT
+17.4 Even this gray trim came back black without paint. | 338-343 |
+19.8 But none of that matters if it won't drive. | 503-508 bay |
+22.0 Best case, it drives. Worst case, I spent six hundred bucks on a really shiny chair. | 517-519 cart, lights off | ☐ MAKE IT DRIVE, STEP 1
+
+
+## Full talk track for the rest of the video
+&gt; **Decisions 2026-10-09:** it DRIVES on camera (517-534, garage, brake lights), so the payoff is "make it drive". Floor mat kept and restored (411-420). No setback visible: slot cut. Chips/dents line cut. Mock-up assumptions: solenoid + controller replaced, $1,000 total spend. New Yamaha Drive2 MSRP $9,952 ("about ten grand"). Checklist last box = MAKE IT DRIVE.
+
+# Body talk track: "$600 golf cart" (Sidequest Builds), 0:30 to end
+
+One shared body that runs after any of the three openings (A Cheap + Dead, B Can I?, C Reveal-first). Every opening ends on "will it turn on / will the tail lights glow", the checkbox list (BATTERIES, SOLENOID, CONTROLLER, BODY, MAKE IT TURN ON) and the "can a buffer save the body without a repaint" loop. The body answers the buffer loop at ~3:50 and the power loop at ~6:15, then reveals and closes on the ledger.
+
+Shot timecodes are original-footage seconds. Where FACTS.md and `judging/judge3_facts.json` disagree, the judge's verified timecodes are used. VO times assume TTS at ~3 words/s.
+
+## Creator: confirm before cut
+
+| # | [CONFIRM] | Where | If no / unknown |
+|---|---|---|---|
+| 1 | **What he replaced besides the battery.** New solenoid? New controller? | 5:58, ticks at 6:22 | Cut the 5:58 line. Do not tick SOLENOID or CONTROLLER; remove those two rows from the checklist everywhere (opening too) so the list doesn't end half-empty. |
+| 2 | **Total spend** (cart + battery + parts + rims + seat + lights) | 7:16 ledger | Cut the line and the ticker climb. End on "Six hundred bucks for the cart" and the "no paint" line. |
+| 3 | **What similar carts sell for** locally (optional) | 7:20 | Cut the line. |
+| 4 | **Any part that went wrong** (wrong part, didn't fit, didn't work first try). Plus footage of it, if any. | 5:39 setback slot | Cut the slot (body gets 10s shorter). The 6:06 silence hold carries the doubt instead. |
+| 5 | **Does it drive?** Only if yes AND there's a driving clip. | 6:26 | Say nothing about driving. Never imply it. |
+| 6 | **Chips and dents left as-is?** (buffing doesn't fix them) | 3:46 | Cut the line. |
+| 7 | **Floor kept, not replaced?** (he said early it looked savable) | 4:57 | Change to "Floor mat back in." |
+
+Editor checks (no creator input needed):
+- **367-420**: judge verified 360-366 is frame struts. Confirm which sub-range shows black plastics being restored vs. the floor mat before cutting 4:25 and 4:57.
+- **Don't reuse the opening's exact sub-clips.** The openings pull 250-256 buffing, 308-311 night paint, 332-335 trim first wipe, 90-93 roof, 138-141 wiring, 503-506 bay. Where the body hits the same moment, use the alternate sub-range in the shot column.
+- **17-19 (solenoid)** is illustrative only; the solenoid area isn't visible. Let the graphic carry it.
+- **Skip 530** (no glow) between the two glow shots, or it reads as a flicker / failure we can't explain.
+- **No rear golden-hour (575-577) and no tail-light close-up (566-567) before 6:13.** After the payoff they're fine.
+- The C openings cut the trim wipe before it goes black (332-335). The 2:18 side quest pays that off.
+
+## Estimated runtime
+
+| Segment | Video time | Length |
+|---|---|---|
+| STEP 1 · TEAR IT DOWN | 0:30-2:18 | 1:48 |
+| Side quest (trim restorer test) | 2:18-2:49 | 0:31 |
+| STEP 2 · SAVE THE BODY | 2:49-3:53 | 1:04 |
+| STEP 3 · NIGHT SHIFT | 3:53-4:35 | 0:42 |
+| Re-hook: "none of this matters" | 4:35-4:54 | 0:19 |
+| STEP 4 · PUT IT BACK TOGETHER | 4:54-5:53 | 0:59 (0:49 without the setback slot) |
+| STEP 5 · MOMENT OF TRUTH | 5:53-6:27 | 0:34 |
+| STEP 6 · THE UPGRADES + reveal + ledger | 6:27-7:34 | 1:07 |
+| End screen | 7:34-7:49 | 0:15 |
+
+**Body: ~7:04 (0:30 to 7:34). Full video: ~7:34 to last word, ~7:50 with end screen.** About 3:15 of VO (585 words at ~3 w/s) and ~3:50 of music-only, natural-sound and breathing room between lines. To land nearer 8:30-9:00, run teardown (150-200) and buffing (264-286) closer to real time and stretch the golden-hour block; don't add VO.
+
+Re-hook spacing (never more than ~90s apart): 0:30 step slate, 1:05 "has to glow" callback, 1:25 "let's see what's under there", 2:01 why-it-was-dead payoff, 2:18 side-quest test, 3:16 "let's see if it comes back", 3:53 slate, 4:38 "none of this matters", 5:05 "let's see if it lines up", 6:03 "let's see if it turns on", 6:27 slate, 7:14 ledger.
+
+---
+
+## STEP 1 · TEAR IT DOWN (0:30-2:18)
+
+| Time | VO | Shots | Graphics |
+|---|---|---|---|
+| 0:30 | Step one. Tear it down. | 60-64 armrests coming off | Slate: **STEP 1 · TEAR IT DOWN** |
+| 0:33 | *MUSIC ONLY (6s)* | 64-75 armrests and windshield off, 1.5x | |
+| 0:39 | Armrests. Windshield. And the roof. | 75-89 at 2x, then 90-94 roof lifted overhead in real time (opening may use 90-93; hold through 94 here) | |
+| 0:45 | *MUSIC ONLY (3s)* | 92-94 roof clears frame | |
+| 0:48 | Then the seat. That stain isn't coming back with us. | 96-100 seat back/armrest lift; 1s insert of 45 stained tan seat | Punch-in on the stain |
+| 0:53 | Front cowl off. | 110 cowl off, wiring exposed | |
+| 0:55 | *NAT SOUND (4s): drill* | 110-118 | |
+| 0:59 | Headlights out. The sun already cooked these. | 118-124 headlight assembly coming out | |
+| 1:03 | Tail lights too. | 127-130 old tail light (red lens, unlit) unscrewed | |
+| 1:05 | Whatever ends up back in here has to glow by the end. That's the test. | 130-133 old tail light lifted out, hold on the empty socket | Corner checklist flashes **MAKE IT TURN ON** (unticked) |
+| 1:11 | *MUSIC ONLY (4s)* | 133-137 | |
+| 1:15 | And then there's this. | 138 hands in the wiring nest (alt: 140-141 if opening used 138-139) | Punch-in |
+| 1:17 | A couple of broken wires, buried in a nest of old ones. | 139-141 | |
+| 1:21 | Now the big one. The whole body comes off the frame. | 142-146 body panel pried off | |
+| 1:25 | Let's see what's actually under there. | 146-150 | |
+| 1:28 | *MUSIC ONLY (30s): pry, lift, body off* | 150-200 at ~1.6x, cut on the pry clicks | none |
+| 1:58 | There it is. Just the frame. | 200-206 body off the frame | |
+| 2:01 | So here's why it was dead. | 8-10 empty bay, bare wires (opening uses 6-8) | Checklist slides in full size |
+| 2:03 | No batteries. Not dead ones. None. | 8-10 hold | **BATTERIES** flashes red |
+| 2:06 | No solenoid. | 18 rear of cart (illustrative) | **SOLENOID** flashes red |
+| 2:07 | A controller that doesn't work. | 13-15 controller close-up | **CONTROLLER** flashes red |
+| 2:09 | And those broken wires. | 139-141 wiring nest | |
+| 2:11 | It's not one problem. It's four. | 48-51 side walkaround | Big "4" punch |
+| 2:14 | Which is kind of good news. Missing parts, you can buy. | 200-206 bare frame, slow push | |
+
+## Side quest: does this stuff even work? (2:18-2:49)
+
+Moved early on purpose: it's a 30-second test with a visible answer, and it sets up the buffer bet. VO avoids saying when he actually did it.
+
+| Time | VO | Shots | Graphics |
+|---|---|---|---|
+| 2:18 | Okay. Side quest. | 331-332.5 faded gray YAMAHA panel, before any brush | Tag: **SIDE QUEST** |
+| 2:20 | This panel's supposed to be black. The sun turned it gray. | 331-332.5 slow push (freeze-extend the last frame if short) | |
+| 2:24 | This is trim restorer. Does this stuff even work? | 336 bottle held to camera | |
+| 2:28 | Let's see. | 333-335 brush applying | |
+| 2:29 | *MUSIC ONLY (9s): the wipe* | 338 partial, 340 darker, 340-346 gloved wipe to deep black | Split-wipe line tracks the brush, GRAY / BLACK |
+| 2:38 | Okay. Yeah. It works. | 345-346 | |
+| 2:40 | Gray to black, no paint. | Split: 331 left, 346 right | **BEFORE / AFTER** |
+| 2:43 | So if a bottle can do that to the plastic, can a buffer do it to the body? | 44-46 chalky chipped body edge, finger pointing | **NO REPAINT** stamp ghosts in |
+
+## STEP 2 · SAVE THE BODY (2:49-3:53)
+
+| Time | VO | Shots | Graphics |
+|---|---|---|---|
+| 2:49 | Step two. Save the body without a repaint. | 222-225 pressure wash on gravel | Slate: **STEP 2 · SAVE THE BODY** |
+| 2:52 | First, a wash. | 225-228 | |
+| 2:54 | *MUSIC + NAT SOUND (10s): pressure washer* | 228-238 | none |
+| 3:04 | Then a scrub. Dirt comes off first, or the buffer just grinds it in. | 238-246 scrubbing the body | |
+| 3:09 | Now the buffer. This is the whole bet. | 256-260 machine buffing (opening uses 250-256) | |
+| 3:12 | If this can't pull the chalk out, I'm painting it anyway. | 260-264 | |
+| 3:16 | Let's see if it comes back. | 264-266 | |
+| 3:18 | *MUSIC ONLY (18s): buffer passes, then the wipe* | 266-280 buffing in real time; 280-286 wipe to a shine, slow push | none |
+| 3:36 | Okay. That's a buffer. No paint. | 283-286 | |
+| 3:39 | Here's where it started. | 44-46 chalky edge | Split left: **BEFORE** |
+| 3:41 | And here it is now. | 283-286 shine | Split right: **AFTER** |
+| 3:43 | Same plastic. Just not chalky anymore. | Split hold | |
+| 3:46 | *(cut: chips/dents line)* | 31-35 oxidation beside 280-286 | |
+| 3:51 | One box down. | Checklist full size | **BODY ✓** (tick SFX) |
+
+## STEP 3 · NIGHT SHIFT (3:53-4:35)
+
+| Time | VO | Shots | Graphics |
+|---|---|---|---|
+| 3:53 | Step three. Night shift. | 300-303 dusk, frame parts in the driveway | Slate: **STEP 3 · NIGHT SHIFT** |
+| 3:55 | The body's white again. Now the frame goes black. | 303-307 | |
+| 3:59 | Which means spray painting outside after dark. | 312-315 night spray under string lights (opening uses 308-311) | |
+| 4:02 | *MUSIC ONLY (14s): best-looking footage in the video, let it breathe* | 315-323, slow-mo if the frame rate allows | none |
+| 4:16 | Not the most efficient setup. Looks pretty good on camera though. | 320-323 hold | |
+| 4:20 | Then the struts get the same, in daylight. | 360-363 black frame struts on a tarp | |
+| 4:23 | Black frame. Black struts. | 363-366 gloved hand, spray can | |
+| 4:25 | And more of the gray plastic comes back black. | 367-399 black plastics restored with gloves (editor check) | |
+| 4:29 | *MUSIC ONLY (6s)* | same range | |
+
+## Re-hook: none of this matters (4:35-4:54)
+
+| Time | VO | Shots | Graphics |
+|---|---|---|---|
+| 4:35 | So it's starting to look like a golf cart again. | 367-399 | |
+| 4:38 | But none of this matters if it doesn't turn on. | Hard cut to 8-10 empty bay, desaturated | Checklist: BODY ✓, rest empty, **MAKE IT TURN ON** pulses |
+| 4:42 | I think the motor's good. Can't prove it yet. | 13-15 controller close-up | |
+| 4:46 | I haven't gotten it to turn on yet. | 48-51 beat-up side walkaround | |
+| 4:49 | And a ten grand cart that doesn't move is still a six hundred dollar paperweight. | 283-286 shine | |
+
+## STEP 4 · PUT IT BACK TOGETHER (4:54-5:53)
+
+| Time | VO | Shots | Graphics |
+|---|---|---|---|
+| 4:54 | Step four. Put it back together. | 400-405 floor mat (editor check) | Slate: **STEP 4 · PUT IT BACK TOGETHER** |
+| 4:57 | When I got it, I said the floor looked savable. Same trick as the trim. It was. | 405-420 floor mat in | |
+| 5:03 | Body back on the black frame. | 426-432 body going back on | |
+| 5:05 | Let's see if it all still lines up. | 432-436 | |
+| 5:08 | *MUSIC ONLY (20s): garage timelapse* | 436-470, ends with the roof on, evening | none |
+| 5:28 | It does. Roof's back on. | 470 roof on, evening | |
+| 5:30 | New steering wheel. | 480 new black steering wheel | |
+| 5:32 | Windshield back up. | 474.5-476 roof/windshield edge, 486-492 windshield | |
+| 5:35 | *MUSIC ONLY (4s)* | 488-492 | |
+| 5:39 | *(cut: no setback visible in the footage)* ~~SETBACK SLOT~~ Template: "And this is where it went sideways. The ___ didn't ___. [What I did about it.]" | [CONFIRM: footage of the problem] | Optional red **X** on the relevant box, then re-tick |
+| 5:49 | From the outside, it's done. Now the part I can't fake. | 486-492 wide | |
+
+## STEP 5 · MOMENT OF TRUTH (5:53-6:27)
+
+| Time | VO | Shots | Graphics |
+|---|---|---|---|
+| 5:53 | Step five. Moment of truth. | 507-509 open bay, new wiring, diamond seat (opening uses 503-506) | Slate: **STEP 5 · MOMENT OF TRUTH** |
+| 5:55 | New battery. Fresh wiring in the bay. | 507-509 red cable, small yellow-labeled unit | |
+| 5:58 | New solenoid. New controller. *(assumed for the mock-up; confirm)* | 509-512 | |
+| 6:00 | That's everything I can do without trying it. | 512-516 person leaning into the bay | |
+| 6:03 | Okay. Let's see if it moves. | 518 finished cart in garage, lights off, wide | Music cuts out |
+| 6:06 | *SILENCE / ROOM TONE (7s): the doubt beat* | 518-526 lights off, slow digital push-in. No cutaways. | Small corner checklist, MAKE IT TURN ON empty |
+| 6:13 | *(no VO)* | 527-528 red glow on the wall, tail lights on | Low hit SFX, music back in |
+| 6:15 | There it is. | 528 punch-in on the glow | **MAKE IT TURN ON ✓** |
+| 6:17 | *(no VO)* | 532 glow (skip 530) | |
+| 6:18 | Tail lights. On a cart that came with an empty battery bay. | 532, then quick split with 8-10 empty bay | **BATTERIES ✓** |
+| 6:22 | *(no VO)* | 532 freeze | **SOLENOID ✓ CONTROLLER ✓** only if CONFIRM #1 says so |
+| 6:23 | *(no VO)* 523-527: it backs across the garage, brake lights glowing. 529-534: pulls back forward. | 532 freeze, slow push | |
+| 6:26 | It drives. That was the whole question. | 532-534 | **MAKE IT DRIVE ✓** |
+
+## STEP 6 · THE UPGRADES + reveal + ledger (6:27-7:34)
+
+| Time | VO | Shots | Graphics |
+|---|---|---|---|
+| 6:27 | Step six. The fun stuff. | 535-540 floor jack under the cart | Slate: **STEP 6 · THE UPGRADES** |
+| 6:30 | New rims and tires. | 540-546 rim install | |
+| 6:32 | *MUSIC ONLY (8s)* | 546-553, ends on rim close-up | none |
+| 6:40 | LED headlights, since the sun cooked the old ones. | LED headlight close-ups in 552-559 (not 556, that's the wheel) | |
+| 6:44 | Diamond-stitch seat, instead of that stain. | 562-566 diamond seat; 0.5s flash of 45 stained seat | |
+| 6:47 | New tail lights. | 566-567 red LED tail light close-up | |
+| 6:49 | And that panel from the side quest. Still black. | 568-569 black YAMAHA panel | |
+| 6:52 | *MUSIC ONLY (2s)* | 560-562 finished cart on the street | |
+| 6:54 | Okay. Golden hour. | 571.5-574 golden-hour front | White flash + impact |
+| 6:56 | *MUSIC ONLY (14s): the reveal* | 572-574 front/side, 575-577 rear with red tails (fine now), 578-580 side | none |
+| 7:10 | Here's where it started. | 0.4-3 beat-up front 3/4 | Before/after split, same angle |
+| 7:12 | And here's where it ended up. | 582 golden-hour front 3/4 | |
+| 7:14 | Six hundred bucks for the cart. | 578-580 side | Ticker: **SPENT: $600** |
+| 7:16 | About a thousand all in, with the battery, rims, seat and lights. *(assumed $1,000; confirm)* | 580 | Ticker climbs to **$[CONFIRM]** |
+| 7:20 | A new one's about ten grand. | 575-577 rear | Small **VALUE** tag |
+| 7:24 | No paint on the body. A buffer, some trim restorer, and it drives. | 582 front 3/4 | |
+| 7:28 | I'll take that. | 582 hold | |
+| 7:30 | If you want to see the next broken thing I buy, subscribe. | 582 hold into end screen | Subscribe button, end screen (15s) |
+
+## VO word count
+
+585 words, counted from the VO column, excluding stage directions and [CONFIRM] placeholders (CONFIRM lines add ~25 if all kept). Lines are short declaratives on purpose; the longest runs (1:05, 2:43, 3:46, 4:49) sit at ~3 w/s and still leave the music-only blocks clean.
+
+
+## Edit kit
+Download sidequest-edit-kit.zip from the page: renderer (render.py, specs.py), voice lines, sound effects, logo, and these scripts. See its README.
+</pre>
 </section>
 
 <footer>Prepared by Urban Algorithm · unlisted working page</footer>
